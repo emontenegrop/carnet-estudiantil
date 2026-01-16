@@ -76,9 +76,9 @@ def crear_carnet(estudiante, imagen_fondo='Captura.PNG', directorio_base='.'):
 
     # Intentar cargar fuentes
     try:
-        font_titulo = ImageFont.truetype("/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf", 40)
-        font_etiqueta = ImageFont.truetype("/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf", 28)
-        font_dato = ImageFont.truetype("/usr/share/fonts/dejavu/DejaVuSans.ttf", 32)
+        font_titulo = ImageFont.truetype("DejaVuSans-Bold.ttf", 40)
+        font_etiqueta = ImageFont.truetype("DejaVuSans-Bold.ttf", 28)
+        font_dato = ImageFont.truetype("DejaVuSans.ttf", 32)
     except:
         # Usar fuente por defecto si no se encuentran las fuentes
         font_titulo = ImageFont.load_default()
@@ -125,7 +125,7 @@ def crear_carnet(estudiante, imagen_fondo='Captura.PNG', directorio_base='.'):
     draw.text((titulo_x, titulo_y), titulo, fill='black', font=font_titulo)
 
     # Datos en la parte inferior derecha
-    datos_x = int(CARNET_WIDTH_PX * 0.42)  # Dejar espacio para la foto
+    datos_x = int(CARNET_WIDTH_PX * 0.35)  # Dejar espacio para la foto
     inicio_y = int(CARNET_HEIGHT_PX * 0.34)
     espacio_linea = int(CARNET_HEIGHT_PX * 0.09)
 
